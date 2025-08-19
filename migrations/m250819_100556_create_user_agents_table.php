@@ -14,6 +14,9 @@ class m250819_100556_create_user_agents_table extends Migration
     {
         $this->createTable('{{%user_agents}}', [
             'id' => $this->primaryKey(),
+            'os' => $this->string(50)->notNull(),
+            'architecture' => $this->string(10)->notNull(),
+            'browser' => $this->string(50)->notNull(),
         ]);
     }
 
